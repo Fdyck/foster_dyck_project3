@@ -1,0 +1,117 @@
+body {
+    height: 65vh;   
+    font-size: 1.6rem; 
+    line-height: 1.6;
+    letter-spacing: 2;
+}
+
+.question {
+    display: flex;  
+    justify-content: space-between;
+    height: 100%;
+    margin: 2rem;
+   
+
+    .card {
+    width: 25%;
+    background: #2a2a2a;
+    color: white;
+    word-wrap: wrap;
+    text-align: center;
+    overflow: hidden;
+    border: 2px solid lightskyblue;
+
+        .card-head {
+            color:#58d35a;  
+            text-align: left;
+            animation: typewriter 4s steps(44);  
+            overflow: hidden;
+            white-space: nowrap;
+            margin:  5% 5%;
+        }
+
+        .card-content {
+            margin: 0 5% 10% 5%;
+            text-align: left;  
+            animation: appear 7s ease;      
+        }
+
+        i {
+            transform: scale(3);
+            animation: appear-img 10s ease; 
+            color:#58d35a;
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 2%;
+    
+    button {
+        height: 25%;
+        border: none;
+        font-size: 2rem;
+        border-radius: 50%;
+        color: white;
+        width: 125%;
+        margin: 10%;
+    }
+
+    .accept {
+        
+        background: rgba(0, 128, 0, 0.8);
+    }
+
+    .decline {
+        background: rgba(128, 0, 0, 0.8);
+    }
+}
+
+.card-1-background {
+    background-image: url(../assets/cock-pit.jpg);
+    background-size: cover;
+    // background-repeat: no-repeat;
+}
+
+@keyframes typewriter{
+  from{
+      width: 0;
+    }
+  to{
+      width: 100%;
+    }
+}
+
+@keyframes appear{
+    0% {
+      color: #2a2a2a;
+    }   
+    50% {
+      color: #2a2a2a;
+    }
+    100%{
+      color: white;
+    }
+}
+
+@keyframes appear-img{
+    0% {
+      color: #2a2a2a;
+    }   
+    50% {
+      color: #2a2a2a;
+    }
+    100%{
+        color: #58d35a;
+    }
+}
+
+
+

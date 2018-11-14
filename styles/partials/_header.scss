@@ -1,0 +1,44 @@
+.header {
+    text-align: center;
+    font-size: 1.5rem;
+    overflow: hidden;
+    height: 25vh;
+    background-image: url(../assets/header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    border-bottom: solid 5px rgba(255, 222, 173, 0.5);
+
+    h1, h2 {
+        margin: 0;
+        font-family: 'BioRhyme', serif;
+        text-shadow: -2.5px 0 #2a2a2a, 0 2.5px #2a2a2a, 2.5px 0 #2a2a2a, 0 -2.5px #2a2a2a;
+        color: #58d35a;
+    }
+
+    h1 {
+        text-transform: uppercase;
+    }
+
+    h2 {
+        text-transform: capitalize;
+        padding: 1% 0;
+    }
+
+    p {
+        margin: 0;
+        padding: 0.5rem 1rem;
+        background:#2a2a2a;
+        color: #58d35a;
+        border: 2px solid lightskyblue;
+    }
+    
+    &-stats {
+        display: flex;
+        justify-content: space-around;
+        
+        .work {
+            font-weight: bold;
+        }
+    }
+}
