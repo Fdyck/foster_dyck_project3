@@ -48,9 +48,13 @@ body {
 }
 
 .thoughts {
+    font-family: 'BioRhyme', serif;
     color: white;
-    font-style: italic;
     animation: appear 4s ease;
+    
+    span {
+        font-style: italic;
+    }
 }
 
 .hide {
