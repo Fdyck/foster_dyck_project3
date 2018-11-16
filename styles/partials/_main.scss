@@ -24,7 +24,7 @@ body {
 
         .message-head {  
             text-align: left;
-            animation: typewriter 1.5s steps(44);  
+            animation: appear-green 1.5s steps(44);  
             overflow: hidden;
             white-space: nowrap;
             margin: 5% 5%;
@@ -32,7 +32,7 @@ body {
 
         .message-content {
             margin: 0 5%;
-            animation: appear-green 2.5s ease;      
+            animation: appear-green 3s ease;      
 
             p {
                 text-align: left;
@@ -41,7 +41,7 @@ body {
 
         .icon {
             transform: scale(4);
-            animation: appear-green 5s ease; 
+            animation: appear-green 7s ease; 
             margin-top: 10%
         }
     }
@@ -50,7 +50,7 @@ body {
 .thoughts {
     font-family: 'BioRhyme', serif;
     color: white;
-    animation: appear 4s ease;
+    animation: appear 6s ease;
     
     span {
         font-style: italic;
@@ -137,7 +137,7 @@ body {
 }
 
 .message-background-6 {
-    background-image: url(../assets/sat.jpg);
+    background-image: url(../assets/jupiter.png);
 }
 
 .message-background-7 {
@@ -153,7 +153,7 @@ body {
     background-image: url(../assets/man.jpg);
 }
 
-.message-background-9, .message-background-9b {
+.message-background-9, .message-background-9b, .message-background-9bb {
     background-image: url(../assets/dark.jpg);
 }
 
