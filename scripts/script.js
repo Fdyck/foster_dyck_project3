@@ -21,9 +21,9 @@ $(function() {
     $(".accept").click(function () {
         if (questionState === 0) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState++;
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4")); 
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = 50;
@@ -32,20 +32,18 @@ $(function() {
             conditionTracker.research = 0;
         } else if (questionState === 1) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState); 
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("You slave to the machine. -10 Fuel, -5 Oxygen");    
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));    
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
             conditionTracker.fuel = conditionTracker.food - 5;
         } else if (questionState === 2) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("You leave for Mars, I hope you brought some books. -10 Fuel, -10 Food, -5 Oxygen.");
-            $(".background").addClass("message-background-" + (questionState));    
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
@@ -53,22 +51,20 @@ $(function() {
             conditionTracker.food = conditionTracker.food - 10;
         } else if (questionState === 3) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("SHINEY!!! This comet is really all RTCPeerConnectionIceErrorEvent, you harvest the H2O for fuel and oxygen. +30 Oxygen, +25 Fuel, -10 Food, +15 Research");
-            $(".background").addClass("message-background-" + (questionState));    
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + (questionState)).removeClass("hide");
-
+            
             conditionTracker.oxygen = conditionTracker.oxygen + 30;
             conditionTracker.fuel = conditionTracker.fuel + 25;
             conditionTracker.food = conditionTracker.food - 10;
             conditionTracker.research = conditionTracker.research + 15
         } else if (questionState === 4) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("Better to be save than sorry! -5 Oxygen, -10 Fuel, -5 Food, +20 Research");
-            $(".background").addClass("message-background-" + (questionState));    
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
@@ -77,10 +73,10 @@ $(function() {
             conditionTracker.research = conditionTracker.research + 20;
         } else if (questionState === "4b") {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState = parseInt(questionState[0]) + 1;
-            alert("While walking around you stumble into a primitive alien society. They revere you as a diety and give gifts. -10 Oxygen, -5 Fuel, +25 Food, +20 Research");
-            $(".background").addClass("message-background-" + (questionState));2
+            
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 10;
@@ -89,10 +85,9 @@ $(function() {
             conditionTracker.research = conditionTracker.research + 20;
         } else if (questionState === 5) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("Not the wisest of choices. Your ship was hit leaking valuables. You did manage to grab some samples on your way through. -20 Fuel, -20 Oxygen, -10 Food, Research + 15");
-            $(".background").addClass("message-background-" + (questionState));    
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 20;
@@ -101,10 +96,9 @@ $(function() {
             conditionTracker.research = conditionTracker.research + 15;
         } else if (questionState === "5b") {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState = parseInt(questionState[0]) + 1;
-            alert("Congrats! You are the first diplomat from earth. Although it doesn't seem a fair trade. As a gesture of good will they gave you a gift. -20 Fuel,  +30 Research. +1 Alien Blob");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
 
             conditionTracker.fuel = conditionTracker.fuel - 20;
@@ -112,10 +106,9 @@ $(function() {
             conditionTracker.alienBlob = conditionTracker.alienBlob + 1;
         } else if (questionState === 6) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("Better to be save than sorry! - 10 Oxygen, -5 Fuel, -10 Food, +15 Research");
-            $(".background").addClass("message-background-" + (questionState));    
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 10;
@@ -124,10 +117,9 @@ $(function() {
             conditionTracker.research = conditionTracker.research + 15;
         } else if (questionState === 7) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("We depart for Saturn, finding many interesting anomalies on the way. -5 Fuel, -5 Oxygen, -5 Food, +15 Research");
-            $(".background").addClass("message-background-" + (questionState));    
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
@@ -136,10 +128,9 @@ $(function() {
             conditionTracker.research = conditionTracker.research + 15;
         } else if (questionState === 8) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("The planet is filled with interesting chemicals we can use to continue our search! +5 Oxygen, +5 Fuel, +5 Food, +15 Research");
-            $(".background").addClass("message-background-" + (questionState));    
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen + 5;
@@ -147,25 +138,22 @@ $(function() {
             conditionTracker.food = conditionTracker.food + 5;
             conditionTracker.research = conditionTracker.research + 15;
         } else if (questionState === "8b") {
-            alert("Cuz your friends don't dance, and if they they don't dance they ain't no friends of mine. But seriously leaving a space craft without any computer assitance... your dead. YOU LOSE!");
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState = 0;
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
-            $(".background").addClass("message-background-" + (questionState));
         } else if (questionState === 9) {
-            alert("Good choice, not a hard choice but still a good one. Even a blind squirrel find a nut occationally. YOU WIN!");
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState = 0;
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
-            $(".background").addClass("message-background-" + (questionState));
         } else if (questionState === "9b") {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
-            questionState = questionState + "b";
-            alert("Still drifting. -5 Oxygen, -5 Fuel, -5 Food");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".accept-response-" + questionState).removeClass("hide");
+            questionState = questionState + "b";    
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
@@ -176,51 +164,51 @@ $(function() {
             alert("Wait someone is coming!")
             alert("The Zarthanians have been tracking you with the Alien Blob they gave. They saw you in trouble and decided to save you. On your way back home they reveal their secrets and finish your research. YOU WIN!")
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".accept-response-" + questionState).removeClass("hide");
             questionState = 0;
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
-            $(".background").addClass("message-background-" + (questionState));
         } else {
-            alert("Still drifting. -5 Oxygen, -5 Fuel, -5 Food");
-            questionState = "9b";
-            conditionTracker.oxygen = conditionTracker.oxygen - 5;
-            conditionTracker.fuel = conditionTracker.fuel - 5;
-            conditionTracker.food = conditionTracker.food - 5;
+            $(".message-" + questionState).addClass("hide");
+            $(".accept-response-" + questionState).removeClass("hide");
+            questionState = 0;
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
+            $(".message-" + questionState).removeClass("hide");
+            
         };
     });
 
     $(".decline").click(function () {
         if (questionState === 0) {
-            alert("Wow... NO GAME FOR YOU!");
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState = 0;
+
             conditionTracker.oxygen = 50;
             conditionTracker.food = 50;
             conditionTracker.fuel = 50;
             conditionTracker.research = 0;
         } else if (questionState === 1) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("I also like to live dangerously... your ship leaked fuel on the way out of the atmostphere but you saved some time! -15 fuel -5 Oxygen");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
             conditionTracker.food = conditionTracker.fuel - 15;
         } else if (questionState === 2) {
-            alert("You orbit the earth one time, you lazy bum. -5 Oxygen, -5 Fuel, -5 Food, +10 Research");
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState = 2;
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
             conditionTracker.fuel = conditionTracker.fuel - 5;
             conditionTracker.food = conditionTracker.food - 5;
-            conditionTracker.research = conditionTracker.research + 10;
+            conditionTracker.research = conditionTracker.research + 5;
         } else if (questionState === 3) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("Check out the will power on you. You think your better than me? -5 Food, -5 Fuel, -10 Oxygen");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
@@ -228,10 +216,9 @@ $(function() {
             conditionTracker.food = conditionTracker.food - 10;
         } else if (questionState === 4) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState = questionState + "b";
-            alert("Lets hope that God does protect the foolish. -10 Fuel, -5 Oxygen, -5 Food, +15 Research");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
@@ -240,10 +227,9 @@ $(function() {
             conditionTracker.research = conditionTracker.research + 15;
         } else if (questionState === "4b") {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState = parseInt(questionState[0]) + 1;
-            alert("I thought you were brave! I guess it's just another one of my many dissapointments. -5 Food, -5 Fuel, -5 Oxygen, +15 Research");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
             
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
@@ -252,10 +238,9 @@ $(function() {
             conditionTracker.research = conditionTracker.research + 15;
         } else if (questionState === 5) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState = questionState + "b";
-            alert("Safety first! -10 Fuel, -10 Oxygen, -15 Food");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 20;
@@ -263,19 +248,17 @@ $(function() {
             conditionTracker.food = conditionTracker.food - 10;
         } else if (questionState === "5b") {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState = parseInt(questionState[0]) + 1;
-            alert("I don't talk to aliens, not now not never. +10 Research.");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
 
             conditionTracker.research = conditionTracker.research + 10;
         } else if (questionState === 6) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("We quell the storms and ride the thunder...but it doesn't go well and we got lost in the planets endless storms. -20 Fuel, -20 Oxygen, -20 Food, +10 Research");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 20;
@@ -284,10 +267,9 @@ $(function() {
             conditionTracker.research = conditionTracker.research + 10;
         } else if (questionState === 7) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState++;
-            alert("Under the thick layers of ice there seems to be a murmaid civilization! We stay to study them before heading on to Saturn -10 Fuel, -10 Oxygen, -10 Food, +20 Research");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + (questionState)).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 10;
@@ -296,10 +278,9 @@ $(function() {
             conditionTracker.research = conditionTracker.research + 20;
         } else if (questionState === 8) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState = questionState + "b";
-            alert("We go towards the glitter it seems so attractive, should we go out there? -5 Oxygen, -5 Fuel, -5 Food, +10 Research");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
@@ -308,10 +289,9 @@ $(function() {
             conditionTracker.research = conditionTracker.research + 10;
         } else if (questionState === "8b") {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState = parseInt(questionState[0]) + 1;
-            alert("We decide it best to watch the glitter from afar and record notes. Boring. -5 Oxygen, -5 Fuel, -5 Food, +5 Research");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
@@ -320,10 +300,9 @@ $(function() {
             conditionTracker.research = conditionTracker.research + 5;
         } else if (questionState === 9) {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState = questionState + "b";
-            alert("We continue to venture into space alone, bold, and likely completely %$#!-ed. -5 Oxygen, -5 Fuel, -5 Food, +5 Research");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
@@ -331,10 +310,9 @@ $(function() {
             conditionTracker.food = conditionTracker.food - 5;
         } else if (questionState === "9b") {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState = questionState + "b";
-            alert("Still drifting. -5 Oxygen, -5 Fuel, -5 Food");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
 
             conditionTracker.oxygen = conditionTracker.oxygen - 5;
@@ -345,18 +323,17 @@ $(function() {
             alert("Wait someone is coming!")
             alert("The Zarthanians have been tracking you with the Alien Blob they gave. They saw you in trouble and decided to save you. On your way back home they reveal their secrets and finish your research. YOU WIN!")
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
+            $(".decline-response-" + questionState).removeClass("hide");
             questionState = 0;
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
-            $(".background").addClass("message-background-" + (questionState));
         } else {
             $(".message-" + questionState).addClass("hide");
-            $(".background").removeClass("message-background-" + questionState);
-            questionState = questionState;
-            alert("Still drifting. -5 Oxygen, -5 Fuel, -5 Food");
-            $(".background").addClass("message-background-" + (questionState));
+            $(".decline-response-" + questionState).removeClass("hide");
+            questionState = 0;
+            $(".video").attr("src", ("assets/background-video-" + questionState + ".mp4"));
             $(".message-" + questionState).removeClass("hide");
-        }
+        } 
     });
 
     $(".buttons").click(function () {
@@ -476,5 +453,39 @@ $(function() {
         //     $(".background").addClass("message-background-" + (questionState));
         // } 
     });
+
+    $(".accept-response-button").click(function () {
+        if (questionState === 0) {
+            $(".end-game").addClass("hide");
+        } if (questionState === 2) {
+            $(".accept-response-" + (questionState)).addClass("hide");
+        } if (questionState === "4b" || questionState === "5b" || questionState === "8b") {
+            $(".accept-response-" + (parseInt(questionState[0]))).addClass("hide");
+        } if (questionState === "9bb") {
+            $(".accept-response-" + parseInt(questionState[0]) + "b").addClass("hide");
+        } else {
+            $(".accept-response-" + (questionState - 1)).addClass("hide");
+        }
+    });
+    
+    $(".decline-response-button").click(function () {
+        if (questionState === 0) {
+            $(".decline-response-" + (questionState)).addClass("hide");
+            $(".end-game").addClass("hide");
+        } if ( questionState === 2) {
+            $(".decline-response-" + (questionState)).addClass("hide");
+        } if (questionState === "9bb") {
+            $(".decline-response-" + parseInt(questionState[0]) + "b").addClass("hide");
+        }if (questionState === "4b" || questionState === "5b" || questionState === "8b" || questionState === "9b") {
+            $(".decline-response-" + (parseInt(questionState[0]))).addClass("hide");
+        } if (questionState === 5 || questionState === 6 || questionState === 9 ) {
+            $(".decline-response-" + ((questionState - 1) + "b")).addClass("hide");
+        } else {
+            $(".decline-response-" + (questionState - 1)).addClass("hide");
+        }
+    });
 });
 
+//To do: find out how to get the alien ending to happen. add in fun facts. Fix, end game images to not stretch.
+
+//Spell Check copy and clean up SCSS. Make notes in my JS to say what is happening.

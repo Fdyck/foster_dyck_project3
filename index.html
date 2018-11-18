@@ -13,7 +13,7 @@
 </head>
 <header class="header">
     <h1 class="wrapper">Solar Scientist</h1>
-    <h2 class="wrapper">Choose your own adventure through the solar system.</h2>
+    <h2 class="wrapper">Adventure through the solar system.</h2>
     <div class="header-stats wrapper">
         <p class="header-stats-value">Fuel: <span class="tracker fuel">50</span>/100</p>
         <p class="header-stats-value">Oxygen: <span class="tracker oxygen">50</span>/100</p>
@@ -21,8 +21,11 @@
         <p class="header-stats-value">Research: <span class="tracker research">0</span>/100</p>
     </div>
 </header>
-<body class="background message-background-0">
+<body >
+    <video class="video"  id="bgvid" playsinline autoplay muted loop src="assets/background-video-0.mp4">
+    </video>
     <main class="question">
+        <!-- QUESTIONS START HERE -->
         <div class="message message-0">
             <p class="message-head">C.A.M. connection active...</p>
             <div class="message-content">
@@ -95,7 +98,7 @@
         <div class="message message-7 hide">
             <p class="message-head">C.A.M. connection active...</p>
             <div class="message-content">
-                <p>We have gone to far from earth for.... signals....reach us properly...experence occational...connection problems. Our choices...Saturn or Io...lucrative.</p>
+                <p>We have gone to far from earth for.... signals....reach us properly...experence occational...connection problems. Our choices...Saturn or Europa...lucrative.</p>
                 <p class="thoughts">Will you choose Saturn? <span>Io is one sylable away from IOU...</span></p>
                 <i class="fas fa-signal-slash icon"></i>
             </div>
@@ -138,13 +141,299 @@
                 <i class="fas fa-alien icon"></i>
             </div>
         </div>
+
+        <!-- RESPONSES START HERE -->
+        <div class="response hide decline-response-0">
+            <img src="assets/response-images/decline-image-0.gif" alt="Chris Pratt holding his hands to his head and mimicing an explosion.">
+            <p class="response-content">Wow... NO GAME FOR YOU!</p>
+            <button class="decline-response-button">Try the other button...</button>
+        </div>
+        <div class="response hide accept-response-1">
+            <img src="assets/response-images/accept-image-1.gif" alt="space ship taking off.">
+            <p class="response-content">You slave to the machine. Welcome to space, lets hope all goes well. </p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -10</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+                <li class= "list list-food">Food +0</li>
+            </ul>
+            <button class="accept-response-button">Get on with it</button>
+        </div>
+        <div class="response hide decline-response-1">
+            <img src="assets/response-images/decline-image-1.gif" alt="a spaceship launching into space leaving smoke behind.">
+            <p class="response-content">I also like to live dangerously... your ship leaked fuel on the way out of the atmostphere but you saved some time.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -15</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-2">
+            <img src="assets/response-images/accept-image-2.gif" alt="Path through space made by red smoke.">
+            <p class="response-content">You leave for Mars, I hope you brought some books.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -10</li>
+                <li class="list list-oxygen">Oxygen -10</li>
+                <li class="list list-food">Food -5</li>
+            </ul>
+            <button class="accept-response-button">Get on with it</button>
+        </div>
+        <div class="response hide decline-response-2">
+            <img src="assets/response-images/decline-image-2.gif" alt="Diagram of two objects orbiting a planet.">
+            <p class="response-content">You orbit the earth one time, you lazy bum.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -5</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+                <li class="list list-food">Food -5</li>
+                <li class="list list-research">Research +5</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-3">
+            <img src="assets/response-images/accept-image-3.gif" alt="Rover landing onto a comet.">
+            <p class="response-content">SHINEY!!! This comet is really all ice, you harvest the H2O for fuel and oxygen.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel +25</li>
+                <li class="list list-oxygen">Oxygen +30</li>
+                <li class="list list-food">Food -10</li>
+                <li class="list list-research">Research +15</li>
+            </ul>
+            <button class="accept-response-button">Get on with it</button>
+        </div>
+        <div class="response hide decline-response-3">
+            <img src="assets/response-images/decline-image-3.gif" alt="Man looking very dissapointed and judged.">
+            <p class="response-content">Check out the will power on you. You think you're better than me?</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -5</li>
+                <li class="list list-oxygen">Oxygen -10</li>
+                <li class="list list-food">Food -5</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-4">
+            <img src="assets/response-images/accept-image-4.gif" alt="Rover being sent to Mars and landing on the surface.">
+            <p class="response-content">Better to be save than sorry!</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -10</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+                <li class="list list-food">Food -5</li>
+                <li class="list list-research">Research +20</li>
+            </ul>
+            <button class="accept-response-button">Get on with it</button>
+        </div>
+        <div class="response hide decline-response-4">
+            <img src="assets/response-images/decline-image-4.gif" alt="Fly over of Mars.">
+            <p class="response-content">Lets hope that God does protect the foolish.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -10</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+                <li class="list list-food">Food -5</li>
+                <li class="list list-research">Research +15</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-4b">
+            <img src="assets/response-images/accept-image-4b.gif" alt="Martian from Loony Toons looking through telescope.">
+            <p class="response-content">While walking around you stumble into a primitive alien society. They revere you as a diety and give gifts.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -5</li>
+                <li class="list list-food">Food +25</li>
+                <li class="list list-research">Research +20</li>
+            </ul>
+            <button class="accept-response-button">Get on with it</button>
+        </div>
+        <div class="response hide decline-response-4b">
+            <img src="assets/response-images/decline-image-4b.gif" alt="Shia looking very dissapointed in a movie theatre.">
+            <p class="response-content">"I thought you were brave! I guess it's just another one of my many dissapointments.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -10</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+                <li class="list list-food">Food -5</li>
+                <li class="list list-research">Research +15</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-5">
+            <img src="assets/response-images/accept-image-5.gif" alt="A spaceship flying close to astroids.">
+            <p class="response-content">Not the wisest of choices. Your ship was hit leaking valuables. You did manage to grab some samples on your way
+            through.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -20</li>
+                <li class="list list-oxygen">Oxygen -20</li>
+                <li class="list list-food">Food -10</li>
+                <li class="list list-research">Research +15</li>
+            </ul>
+            <button class="accept-response-button">Get on with it</button>
+        </div>
+        <div class="response hide decline-response-5">
+            <img src="assets/response-images/decline-image-5.gif" alt="Senior Chang from the show Community saying 'Safety First'">
+            <p class="response-content">Safety first!</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -20</li>
+                <li class="list list-oxygen">Oxygen -20</li>
+                <li class="list list-food">Food -10</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-5b">
+            <img src="assets/response-images/accept-image-5b.gif" alt="Aliens dancing under a UFO">
+            <p class="response-content">Congrats! You are the first diplomat from earth. Although it doesn't seem a fair trade. As a gesture of good will they gave you a gift.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -20</li>
+                <li class="list list-research">Research +30</li>
+                <li class="list-blob list">Alien Blob +1</li>
+            </ul>
+            <button class="accept-response-button">Get on with it</button>
+        </div>
+        <div class="response hide decline-response-5b">
+            <img src="assets/response-images/decline-image-5b.gif" alt="Aliens looking through their spaceship window.">
+            <p class="response-content">I don't talk to aliens, not now not never.</p>
+            <ul class="response-list">
+                <li class="list list-research">Research +10</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-6">
+            <img src="assets/response-images/decline-image-5.gif" alt="Senior Chang from the show Community saying 'Safety First'">
+            <p class="response-content">Better to be save than sorry!</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -5</li>
+                <li class="list list-oxygen">Oxygen -10</li>
+                <li class="list list-food">Food -10</li>
+                <li class="list list-research">Research +15</li>
+            </ul>
+            <button class="accept-response-button">Get on with it</button>
+        </div>
+        <div class="response hide decline-response-6">
+            <img src="assets/response-images/decline-image-6.gif" alt="Swirling storms inside of Jupiter">
+            <p class="response-content">"We quell the storms and ride the thunder...but it doesn't go well and we got lost in the planets endless storms.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -20</li>
+                <li class="list list-oxygen">Oxygen -20</li>
+                <li class="list list-food">Food -10</li>
+                <li class="list list-research">Research +10</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-7">
+            <img src="assets/response-images/accept-image-7.gif" alt="rotating picture of Saturn.">
+            <p class="response-content">We depart for Saturn, finding many interesting anomalies on the way.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -5</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+                <li class="list list-food">Food -5</li>
+                <li class="list list-research">Research +15</li>
+            </ul>
+            <button class="accept-response-button">Get on with it</button>
+        </div>
+        <div class="response hide decline-response-7">
+            <img src="assets/response-images/decline-image-7.gif" alt="A little rover sitting on Europa seeing Jupiter in the background">
+            <p class="response-content">Under the thick layers of ice there seems to be a murmaid civilization! We stay to study them before heading on to
+            Saturn.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -10</li>
+                <li class="list list-oxygen">Oxygen -10</li>
+                <li class="list list-food">Food -10</li>
+                <li class="list list-research">Research +20</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-8">
+            <img src="assets/response-images/accept-image-8.gif" alt="View of saturn and its chemical atmosphere.">
+            <p class="response-content">The planet is filled with interesting chemicals we can use to continue our search!</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel +5</li>
+                <li class="list list-oxygen">Oxygen +5</li>
+                <li class="list list-food">Food +5</li>
+                <li class="list list-research">Research +15</li>
+            </ul>
+            <button class="accept-response-button">Get on with it</button>
+        </div>
+        <div class="response hide decline-response-8">
+            <img src="assets/response-images/decline-image-8.gif" alt="Zoom in from looking at Saturn to Saturn's rings">
+            <p class="response-content">We go towards the glitter it seems so attractive, should we go out there?</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -5</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+                <li class="list list-food">Food -5</li>
+                <li class="list list-research">Research +10</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-8b end-game">
+            <img src="assets/response-images/accept-image-8b.gif" alt="Cartoon spaceman dancing in space.">
+            <p class="response-content">Cuz your friends don't dance, and if they they don't dance they ain't no friends of mine. But seriously leaving a space craft without any computer assitance... your dead. YOU LOSE!</p>
+            <button class="accept-response-button">Play agian.</button>
+        </div>
+        <div class="response hide decline-response-8b">
+            <img src="assets/response-images/decline-image-8b.gif" alt="Cartoon cat flying through space.">
+            <p class="response-content">We decide it best to watch the glitter from afar and record notes. Boring.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -5</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+                <li class="list list-food">Food -5</li>
+                <li class="list list-research">Research +5</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-9 end-game">
+            <img src="assets/response-images/accept-image-9.gif" alt="An space man jumping for joy.">
+            <p class="response-content">Good choice, not a hard choice but still a good one. Even a blind squirrel find a nut occationally. YOU WIN!</p>
+            <button class="accept-response-button">Play agian.</button>
+        </div>
+        <div class="response hide decline-response-9">
+            <img src="assets/response-images/decline-image-9.gif" alt="Cat looking scared in tie die space background.">
+            <p class="response-content">We continue to venture into space alone, bold, and likely completely %$#!-ed.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -5</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+                <li class="list list-food">Food -5</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-9b">
+            <img src="assets/response-images/image-9b.gif" alt="A cartoon girl sitting in space thinking as she drifts.">
+            <p class="response-content">Still drifting.</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -5</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+                <li class="list list-food">Food -5</li>
+                <li class="list list-research">Research -5</li>
+            </ul>
+            <button class="accept-response-button">Get on with it</button>
+        </div>
+        <div class="response hide decline-response-9b">
+            <img src="assets/response-images/image-9b.gif" alt="A cartoon girl sitting in space thinking as she drifts.">
+            <p class="response-content">Still Drifitng</p>
+            <ul class="response-list">
+                <li class="list list-fuel">Fuel -5</li>
+                <li class="list list-oxygen">Oxygen -5</li>
+                <li class="list list-food">Food -5</li>
+            </ul>
+            <button class="decline-response-button">Get on with it</button>
+        </div>
+        <div class="response hide accept-response-9bb end-game">
+            <img src="assets/response-images/image-9b.gif" alt="A cartoon girl sitting in space thinking as she drifts.">
+            <p class="response-content">Drifting Forever. You Lose</p>
+            <button class="accept-response-button">Play again.</button>
+        </div>
+        <div class="response hide decline-response-9bb end-game">
+            <img src="assets/response-images/image-9b.gif" alt="A cartoon girl sitting in space thinking as she drifts.">
+            <p class="response-content">Drifting Forever. You Lose</p>
+            <button class="accept-response-button">Play again.</button>
+        </div>
+        <!-- FACTS START HERE -->
+
+
+        <!-- ACCEPT AND DECLINE BUTTONS -->
         <div class="buttons">
             <button class="accept">Accept</button>
             <button class="decline">Decline</button>
         </div>
     </main>
+    
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
     <script src="scripts/script.js"></script>
+    
 </body>
 </html>

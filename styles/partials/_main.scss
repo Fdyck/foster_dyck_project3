@@ -5,26 +5,32 @@ body {
     letter-spacing: 2;
 }
 
+video { 
+  position: absolute;
+  width: 100%;
+  z-index: -100;
+}
+
 .question {
     display: flex;  
     justify-content: space-between;
     height: 65%;
     margin: 2rem;
-   
+    position: relative;
 
     .message {
-    max-width: 30%;
-    min-width: 35rem;
-    background: #2a2a2a;
-    color:#58d35a;
-    word-wrap: wrap;
-    text-align: center;
-    overflow: hidden;
-    border: 2px solid lightskyblue;
+        max-width: 30%;
+        min-width: 35rem;
+        background: #2a2a2a;
+        color:#58d35a;
+        word-wrap: wrap;
+        text-align: center;
+        overflow: hidden;
+        border: 2px solid lightskyblue;
 
         .message-head {  
             text-align: left;
-            animation: appear-green 1.5s steps(44);  
+            animation: appear-green 3s ease;  
             overflow: hidden;
             white-space: nowrap;
             margin: 5% 5%;
@@ -32,7 +38,7 @@ body {
 
         .message-content {
             margin: 0 5%;
-            animation: appear-green 3s ease;      
+            animation: appear-green 5s ease;      
 
             p {
                 text-align: left;
@@ -41,22 +47,106 @@ body {
 
         .icon {
             transform: scale(4);
-            animation: appear-green 7s ease; 
+            animation: appear-green 9s ease; 
             margin-top: 10%
+        }
+
+        .thoughts {
+            font-family: 'BioRhyme', serif;
+            color: white;
+            animation: appear 8s ease;
+    
+            span {
+                font-style: italic;
+            }
+        }
+
+        &-1, &-0 {
+            .message-head {
+                animation: appear-green 1s ease;  
+            }
+
+            .message-content {
+                animation: appear-green 3s ease; 
+            }
+
+            .icon {
+                animation: appear-green 6s ease; 
+            }
+
+            .thoughts {
+                animation: appear 5s ease;
+            }
         }
     }
 }
 
-.thoughts {
-    font-family: 'BioRhyme', serif;
-    color: white;
-    animation: appear 6s ease;
-    
-    span {
-        font-style: italic;
+.response {
+    display: flex;
+    flex-direction: column;
+    background: #2a2a2a;
+    color:white;
+    word-wrap: wrap;
+    text-align: center;
+    overflow: hidden;
+    border: 2px solid lightskyblue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    min-width: 30rem;
+
+    .response-content {
+    max-width: 90%;
+    margin: 1rem auto;
+    }
+
+    .response-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        text-align: center;
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
+
+    .decline-response-button, .accept-response-button {
+        width: 30%;
+        margin: 1rem auto;
+
+        &:active {
+            margin-bottom: 2px;
+            box-shadow: none;
+        }
+    }
+
+    img {
+        width: 60%;
+        max-height: 40%;
+        margin: 1rem auto;
+        margin-top: 2rem;
+        
     }
 }
 
+.end-game {
+    width: 100%;
+    left: 0;
+    right: 0;
+
+    .decline-response-button, .accept-response-button {
+        width: 25%;
+        margin: 1rem auto;
+    }
+    
+    img {
+        max-height: 60%;
+        width: 50;
+    }
+}
+   
 .hide {
     display: none;
 }
@@ -92,77 +182,6 @@ body {
             margin-bottom: 2px;
 	        box-shadow: none;
         }
-    }
-}
-
-.background {
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.message-background-0 {
-    background-image: url(../assets/cock-pit.jpg);
-    
-}
-
-.message-background-1 {
-    background-image: url(../assets/take-off.jpg);
-    background-position: top;
-}
-
-.message-background-2 {
-    background-image: url(../assets/orbit.jpg);
-    background-position: top;
-}
-
-.message-background-3 {
-    background-image: url(../assets/eclipse.jpg);
-}
-
-.message-background-4 {
-    background-image: url(../assets/mars.jpg);
-    background-position: top;
-}
-
-.message-background-4b {
-    background-image: url(../assets/arid.jpg);
-}
-
-.message-background-5 {
-    background-image: url(../assets/milky-way.jpg);
-    background-position: center;
-}
-
-.message-background-5b {
-    background-image: url(../assets/alien.jpg);
-}
-
-.message-background-6 {
-    background-image: url(../assets/jupiter.png);
-}
-
-.message-background-7 {
-    background-image: url(../assets/lightspeed.jpg);
-}
-
-.message-background-8 {
-    background-image: url(../assets/saturn.png);
-    background-position: left;
-}
-
-.message-background-8b {
-    background-image: url(../assets/man.jpg);
-}
-
-.message-background-9, .message-background-9b, .message-background-9bb {
-    background-image: url(../assets/dark.jpg);
-}
-
-@keyframes typewriter{
-  from{
-      width: 0;
-    }
-  to{
-      width: 100%;
     }
 }
 
