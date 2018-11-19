@@ -42,3 +42,9 @@
         }
     }
 }
+
+@media (max-width: 460px) {
+    h2 {
+        display: none;
+    }
+}

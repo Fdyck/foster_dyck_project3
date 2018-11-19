@@ -98,18 +98,26 @@ video {
     min-width: 30rem;
 
     .response-content {
-    max-width: 90%;
-    margin: 1rem auto;
+        max-width: 90%;
+        margin: 1rem auto;
     }
 
     .response-list {
         list-style: none;
         display: flex;
         justify-content: space-between;
-        width: 80%;
+        max-width: 90%;
         text-align: center;
         margin: 1rem auto;
-        padding: 0.5rem;
+        padding: 0;
+
+        .list {
+            padding-right: 2rem;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
     }
 
     .decline-response-button, .accept-response-button {
@@ -123,8 +131,7 @@ video {
     }
 
     img {
-        width: 60%;
-        max-height: 40%;
+        height: 50%;
         margin: 1rem auto;
         margin-top: 2rem;
         
@@ -185,6 +192,32 @@ video {
     }
 }
 
+.fun-fact {
+    max-width: 50%;
+    min-width: 5rem;
+    min-height: 5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #2a2a2a;
+    color: #58d35a;
+    border: 2px solid lightskyblue;
+    cursor: pointer;
+
+
+    .fun-fact-content {
+        margin: 1rem;
+    }
+
+    i {
+        transform: scale(2);
+        text-align: center;
+        position: absolute;
+        right: 40%;
+        top: 30%;
+    }
+}
+
 @keyframes appear{
     0% {
       color: #2a2a2a;
@@ -209,5 +242,48 @@ video {
     }
 }
 
+@media (max-width: 900px) {
+    video {
+        display: none;
+    }
+
+    body {
+        background-image: url(../assets/milky-way.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .response {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .question {
+        flex-direction: column;
+        margin: 0;
+        height: 75%;
+
+        .message {
+            max-width: 100%;
+            min-width: 100%;
+            height: 85%;
+        }
+
+        .buttons {
+            flex-direction: row;
+            margin: 0 auto;
+        }
+    }
+
+    .fun-fact {
+        display: none;
+    }
+}
+
+
+// TO DO BEFORE PORTFOLIO (ADD IN ANIMATIONS FOR THE POP UPS AND ANY OTHER UNHIDDEN ITEMS)
 
 
